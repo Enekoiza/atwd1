@@ -32,7 +32,7 @@ $dbValues = array(
 //!                          --------------------------                          //
 
 
-$currencies = array('AUD', 'BRL', 'CAD', 'CHF', 'CNY', 'DKK', 'EUR', 'HKD', 'HUF', 'INR', 'JPY', 'MXN', 'MYR', 'NOK', 'NZD', 'PHP', 'RUB', 'SEK', 'SGD', 'THB', 'TRY', 'USD', 'ZAR');
+$currencies = array('AUD', 'BRL', 'CAD', 'CHF', 'CNY', 'DKK', 'EUR', 'GBP', 'HKD', 'HUF', 'INR', 'JPY', 'MXN', 'MYR', 'NOK', 'NZD', 'PHP', 'RUB', 'SEK', 'SGD', 'THB', 'TRY', 'USD', 'ZAR');
 
 
 ?>
