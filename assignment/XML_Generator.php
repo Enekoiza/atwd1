@@ -4,6 +4,16 @@
 //?http://localhost:8080/web-dev-project/XML_Generator.php?from=GBP&to=JPY&amount=10.35
 //!-------
 
+require "database.php";
+
+$xml = simplexml_load_file("XMLStore.xml");
+
+$currency_code = $xml->xpath('/store/currencies/currency');
+foreach ($currency_code as $currency)
+{
+    echo $currency[0]->code;
+    echo '</br>';
+} 
 
 
 
@@ -16,17 +26,18 @@
 // $conv = $xml->createElement('conv');
 
 // $xml->appendChild($conv);
-// $at = $xml->createElement('at', 12);
+// $at = $xml->createElement('at', getStoredTimestamp(true));
 // $conv->appendChild($at);
 // $rate = $xml->createElement('rate');
 // $conv->appendChild($rate);
 
 
-$xml = simplexml_load_file("XMLStore.xml");
-$GBPValue = $xml->xpath('/store/currencies/currency');
 
-print_r((string)$GBPValue[0]->code);
 
-// echo $xml->saveXML();
+// print_r($timestamp);
+
+// print_r((string)$currency_code[0]->code);
+
+echo $xml->saveXML();
 
 ?>
