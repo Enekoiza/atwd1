@@ -8,18 +8,21 @@ function checkErrors($from = 0, $to = 0, $amnt = 0, $format = 0)
     
     if(($from == 0) and ($to == 0) and ($amnt == 0) and ($format == 0))
     {
-        return errorFormat(1100, 'Parameter not recognized');
+        errorFormat(1100, 'Parameter not recognized');
+        exit();
     }
 
 
     if((!isSet($from)) or (!isSet($to)) or (!isSet($amnt)))
     {
-        return errorFormat(1000, 'Required parameter is missing');
+        errorFormat(1000, 'Required parameter is missing');
+        exit();
     }
 
     if(!file_exists('XMLStore.xml'))
     {
-        return errorFormat(1500, 'Error in service');
+        errorFormat(1500, 'Error in service');
+        exit();
     }
 
     $xmlStorage = simplexml_load_file("XMLStore.xml");
@@ -31,21 +34,22 @@ function checkErrors($from = 0, $to = 0, $amnt = 0, $format = 0)
 
     if(($fromCheck == NULL) or ($toCheck == NULL))
     {
-
-        return errorFormat(1200, "Currency type not recognized");
-
+        errorFormat(1200, "Currency type not recognized");
+        exit();
     }
 
 
     
     if(!is_numeric($amnt))
     {
-        return errorFormat(1300, 'Currency amount must be a decimal number');
+        errorFormat(1300, 'Currency amount must be a decimal number');
+        exit();
     }
 
     if(($format != 'json') and ($format != 'xml'))
     {
-        return errorFormat(1400, 'Format must be xml or json');
+        errorFormat(1400, 'Format must be xml or json');
+        exit();
     }
     
 

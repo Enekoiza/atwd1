@@ -68,7 +68,8 @@ function errorFormat($errorCode, $errorMessage)
     
 }
 
+$month = 20120;
 
-
+echo date('M', strtotime($month . '06'));
 
 ?>
