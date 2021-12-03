@@ -4,22 +4,30 @@
 //?http://localhost:8080/web-dev-project/XML_Generator.php?from=GBP&to=JPY&amount=10.35
 //!-------
 
-require "database.php";
+require_once "Config.php";
+require_once "Error_Handling.php";
 
-$xml = simplexml_load_file("XMLStore.xml");
+// $xml = simplexml_load_file("XMLStore.xml");
 
-$currency_code = $xml->xpath('/store/currencies/currency');
-foreach ($currency_code as $currency)
+// $currency_code = $xml->xpath('/store/currencies/currency');
+// foreach ($currency_code as $currency)
+// {
+//     echo $currency[0]->code;
+//     echo '</br>';
+// } 
+$format = "xml";
+
+extract($_GET);
+if((isSet($format)) and (isSet($from)) and (isSet($to)) and (isSet($amnt)))
 {
-    echo $currency[0]->code;
-    echo '</br>';
-} 
+    checkErrors($from, $to, $amnt, $format);
+}
+else
+{
+    checkErrors();
+}
 
 
-
-// $from = $_GET['from'];
-// $to = $_GET['to'];
-// $amount = $_GET['amount'];
 
 // header('Content-Type:text/xml');
 // $xml = new DOMDocument('1.0', 'utf-8');
@@ -31,13 +39,10 @@ foreach ($currency_code as $currency)
 // $rate = $xml->createElement('rate');
 // $conv->appendChild($rate);
 
+// echo $xml->saveXML();
 
 
 
-// print_r($timestamp);
 
-// print_r((string)$currency_code[0]->code);
-
-echo $xml->saveXML();
 
 ?>
