@@ -44,7 +44,7 @@ function getStoredTimestamp($format = false)
     
     if($format == true)
     {
-        return gmdate("Y-m-d H:i:s",(string)$xml->xpath('/store/timestamp')[0]);
+        return gmdate("Y-M-d H:i:s",(string)$xml->xpath('/store/timestamp')[0]);
     }
 
     return (string)$xml->xpath('/store/timestamp')[0];
@@ -68,8 +68,6 @@ function errorFormat($errorCode, $errorMessage)
     
 }
 
-$month = 20120;
 
-echo date('M', strtotime($month . '06'));
 
 ?>

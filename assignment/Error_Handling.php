@@ -19,7 +19,7 @@ function checkErrors($from = 0, $to = 0, $amnt = 0, $format = 0)
         exit();
     }
 
-    if(!file_exists('XMLStore.xml'))
+    if((!file_exists('XMLStore.xml')) or ($from == $to))
     {
         errorFormat(1500, 'Error in service');
         exit();
