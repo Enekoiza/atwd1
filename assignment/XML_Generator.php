@@ -4,22 +4,19 @@ require_once "Config.php";
 
 function generateFormattedOutput($from, $to, $amnt, $format)
 {
+    $xmlStorage = simplexml_load_file("XMLStore.xml");
+
+    $from_data = $xmlStorage->xpath(sprintf('/store/currencies/currency[@code="%s"]', $from));
+    $to_data = $xmlStorage->xpath(sprintf('/store/currencies/currency[@code="%s"]', $to));
+    
+    $final_amnt = ($amnt * $to_data[0]->rate) / $from_data[0]->rate;
+    $rate_conv = $from_data[0]->rate * $to_data[0]->rate;
 
     if($format == "xml")
     {
-        $xmlStorage = simplexml_load_file("XMLStore.xml");
-
-        $from_data = $xmlStorage->xpath(sprintf('/store/currencies/currency[@code="%s"]', $from));
-        $to_data = $xmlStorage->xpath(sprintf('/store/currencies/currency[@code="%s"]', $to));
-    
-    
-    
-        $final_amnt = ($amnt * $to_data[0]->rate) / $from_data[0]->rate;
-        $rate_conv = $from_data[0]->rate * $to_data[0]->rate;
         // $final_amnt = $amnt * $rate_conv;
     
-    
-    
+
         header('Content-Type:text/xml');
         $xml = new DOMDocument('1.0', 'utf-8');
         $xml_conv = $xml->createElement('conv');
@@ -54,9 +51,38 @@ function generateFormattedOutput($from, $to, $amnt, $format)
     
         echo $xml->saveXML();
     }
- 
+    elseif($format == "json")
+    {
+
+        $from_array = array(
+                    "code" => $from,
+                    "curr" => $from_data[0]->name,
+                    "loc" => $from_data[0]->loc,
+                    "amnt" => $amnt,
+        );
+
+        $to_array = array(
+                    "code" => $to,
+                    "curr" => $to_data[0]->name,
+                    "loc" => $to_data[0]->loc,
+                    "amnt" => $final_amnt,
+        );
 
 
+        $conv = array(
+                    "at" => getStoredTimestamp(true),
+                    "rate" => $rate_conv,
+                    "from" => $from_array,
+                    "to" => $to_array,
+
+        );
+
+        $final_array = array("conv" => $conv);
+
+        header('Content-Type: application/json');
+        $output = json_encode($final_array,JSON_PRETTY_PRINT);
+        echo $output;
+    }
 }
 
 
