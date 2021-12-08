@@ -8,14 +8,7 @@ require_once "Config.php";
 require_once "Error_Handling.php";
 require_once "XML_Generator.php";
 
-// $xml = simplexml_load_file("XMLStore.xml");
 
-// $currency_code = $xml->xpath('/store/currencies/currency');
-// foreach ($currency_code as $currency)
-// {
-//     echo $currency[0]->code;
-//     echo '</br>';
-// } 
 $format = "xml";
 
 extract($_GET);

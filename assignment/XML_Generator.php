@@ -56,15 +56,15 @@ function generateFormattedOutput($from, $to, $amnt, $format)
 
         $from_array = array(
                     "code" => $from,
-                    "curr" => $from_data[0]->name,
-                    "loc" => $from_data[0]->loc,
+                    "curr" => (string)$from_data[0]->name,
+                    "loc" => (string)$from_data[0]->loc,
                     "amnt" => $amnt,
         );
 
         $to_array = array(
                     "code" => $to,
-                    "curr" => $to_data[0]->name,
-                    "loc" => $to_data[0]->loc,
+                    "curr" => (string)$to_data[0]->name,
+                    "loc" => (string)$to_data[0]->loc,
                     "amnt" => $final_amnt,
         );
 
@@ -82,6 +82,7 @@ function generateFormattedOutput($from, $to, $amnt, $format)
         header('Content-Type: application/json');
         $output = json_encode($final_array,JSON_PRETTY_PRINT);
         echo $output;
+
     }
 }
 

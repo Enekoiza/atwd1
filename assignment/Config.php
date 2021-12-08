@@ -50,23 +50,7 @@ function getStoredTimestamp($format = false)
     return (string)$xml->xpath('/store/timestamp')[0];
 }
 
-function errorFormat($errorCode, $errorMessage)
-{
-    header('Content-Type:text/xml');
-    $xml = new DOMDocument('1.0', 'utf-8');
-    $conv = $xml->createElement('conv');
 
-    $xml->appendChild($conv);
-    $xml_error = $xml->createElement('error');
-    $conv->appendChild($xml_error);
-    $xml_code = $xml->createElement('code', $errorCode);
-    $xml_msg = $xml->createElement('msg', $errorMessage);
-    $xml_error->appendChild($xml_code);
-    $xml_error->appendChild($xml_msg);
-
-    echo $xml->saveXML();
-    
-}
 
 
 
