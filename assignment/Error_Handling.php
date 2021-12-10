@@ -1,6 +1,7 @@
 <?php
 
-require_once "XML_Generator.php";
+require_once "Config.php";
+
 
 function errorFormat($errorCode, $errorMessage)
 {
@@ -49,8 +50,12 @@ function checkErrors($from = 0, $to = 0, $amnt = 0, $format = 0)
 
     $toCheck = $xmlStorage->xpath(sprintf('/store/currencies/currency[@code="%s"]', $to));
 
+    $fromLiveCheck = $xmlStorage->xpath(sprintf('/store/currencies/currency[@code="%s"]/live', $from));
 
-    if(($fromCheck == NULL) or ($toCheck == NULL))
+    $toLiveCheck = $xmlStorage->xpath(sprintf('/store/currencies/currency[@code="%s"]/live', $to));
+
+
+    if((($fromCheck == NULL) or ($toCheck == NULL)) or (($fromLiveCheck[0] == 0) or ($toLiveCheck[0] == 0)))
     {
         errorFormat(1200, "Currency type not recognized");
         exit();

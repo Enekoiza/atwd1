@@ -50,7 +50,10 @@ function getStoredTimestamp($format = false)
     return (string)$xml->xpath('/store/timestamp')[0];
 }
 
+function DeleteLiveValue($code)
+{
 
+}
 
 
 

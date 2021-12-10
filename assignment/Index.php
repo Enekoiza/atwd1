@@ -27,5 +27,4 @@ else
 
 generateFormattedOutput($from, $to, $amnt, $format);
 
-
 ?>
