@@ -38,22 +38,24 @@ function getAPIValues()
 
 //TODO Returns the timestamp stored in the XML file
 //TODO If passed true it will return the value formatted
-function getStoredTimestamp($format = false)
+function getStoredTimestamp($format = false, $stored = false, $xml)
 {
-    $xml = simplexml_load_file("XMLStore.xml");
+    // $xml = simplexml_load_file("XMLStore.xml");
     
-    if($format == true)
+    if($format == true and $stored == true)
     {
         return gmdate("Y-M-d H:i:s",(string)$xml->xpath('/store/timestamp')[0]);
+    }
+    else if($format == true and $stored == false)
+    {
+        return gmdate("Y-M-d H:i:s",time());
+    
     }
 
     return (string)$xml->xpath('/store/timestamp')[0];
 }
 
-function DeleteLiveValue($code)
-{
 
-}
 
 
 

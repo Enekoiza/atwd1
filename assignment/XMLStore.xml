@@ -818,10 +818,10 @@
             <live>0</live>
         </currency>
         <currency code="EUR">
-            <rate>1.1742997301286</rate>
+            <rate>1.170585279416</rate>
             <name>Euro</name>
             <loc>Europe Union</loc>
-            <live>0</live>
+            <live>1</live>
         </currency>
         <currency code="LTC">
             <rate>0</rate>

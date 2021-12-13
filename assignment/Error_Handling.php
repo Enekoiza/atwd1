@@ -21,6 +21,26 @@ function errorFormat($errorCode, $errorMessage)
     
 }
 
+function UpdateErrorFormat($errorCode, $errorMessage, $act)
+{
+    header('Content-Type:text/xml');
+    $xml = new DOMDocument('1.0', 'utf-8');
+    $action = $xml->createElement('action');
+
+    $xml->appendChild($action);
+    $xml_error = $xml->createElement('error');
+    $action->appendChild($xml_error);
+    $xml_code = $xml->createElement('code', $errorCode);
+    $xml_msg = $xml->createElement('msg', $errorMessage);
+    $xml_error->appendChild($xml_code);
+    $xml_error->appendChild($xml_msg);
+
+    $action->setAttribute('type', $act);
+
+    echo $xml->saveXML();
+    
+}
+
 
 function checkErrors($from = 0, $to = 0, $amnt = 0, $format = 0)
     {

@@ -22,7 +22,7 @@ function generateFormattedOutput($from, $to, $amnt, $format)
         $xml_conv = $xml->createElement('conv');
     
         $xml->appendChild($xml_conv);
-        $xml_at = $xml->createElement('at', getStoredTimestamp(true));
+        $xml_at = $xml->createElement('at', getStoredTimestamp(true,true, $xmlStorage));
         $xml_conv->appendChild($xml_at);
         $xml_rate = $xml->createElement('rate', $rate_conv);
         $xml_conv->appendChild($xml_rate);
@@ -70,7 +70,7 @@ function generateFormattedOutput($from, $to, $amnt, $format)
 
 
         $conv = array(
-                    "at" => getStoredTimestamp(true),
+                    "at" => getStoredTimestamp(true,true, $xmlStorage),
                     "rate" => $rate_conv,
                     "from" => $from_array,
                     "to" => $to_array,
@@ -88,8 +88,92 @@ function generateFormattedOutput($from, $to, $amnt, $format)
 
 
 
+function DeleteLiveValue($xml, $currency)
+{
+    header('Content-Type:text/xml');
+    $xml = new DOMDocument('1.0', 'utf-8');
+    $xml_action = $xml->createElement('action');
+    $xml->appendChild($xml_action);
+    $xml_at = $xml->createElement("at", getStoredTimestamp(true,false, $xml));
+    $xml_code = $xml->createElement("code", $currency);
+    $xml_action->appendChild($xml_at);
+    $xml_action->appendChild($xml_code);
+    $xml_action->setAttribute("type", "del");
+
+    echo $xml->saveXML();
 
 
+    return;
+
+
+}
+
+function PostLiveValue($xml, $currency)
+{
+
+    $rate = $xml->xpath('/store/currencies/currency[@code="' . $currency .'"]/rate');
+    $name = $xml->xpath('/store/currencies/currency[@code="' . $currency .'"]/name');
+    $loc = $xml->xpath('/store/currencies/currency[@code="' . $currency .'"]/loc');
+
+    
+
+
+    header('Content-Type:text/xml');
+    $xml = new DOMDocument('1.0', 'utf-8');
+    $xml_action = $xml->createElement('action');
+    $xml->appendChild($xml_action);
+    $xml_at = $xml->createElement('at', getStoredTimestamp(true,false, $xml));
+    $xml_rate = $xml->createElement('rate', $rate[0]);
+    $xml_curr = $xml->createElement('curr');
+    $xml_action->appendChild($xml_at);
+    $xml_action->appendChild($xml_rate);
+    $xml_action->appendChild($xml_curr);
+    $xml_curr_code = $xml->createElement('code', $currency);
+    $xml_curr_name = $xml->createElement('name', $name[0]);
+    $xml_curr_loc = $xml->createElement('loc', $loc[0]);
+    $xml_curr->appendChild($xml_curr_code);
+    $xml_curr->appendChild($xml_curr_name);
+    $xml_curr->appendChild($xml_curr_loc);
+
+    echo $xml->saveXML();
+
+    return;
+}
+
+function PutLiveValue($xml, $currency, $old, $new)
+{
+
+    $name = $xml->xpath('/store/currencies/currency[@code="' . $currency .'"]/name');
+    $loc = $xml->xpath('/store/currencies/currency[@code="' . $currency .'"]/loc');
+
+    
+
+
+    header('Content-Type:text/xml');
+    $xml = new DOMDocument('1.0', 'utf-8');
+    $xml_action = $xml->createElement('action');
+    $xml->appendChild($xml_action);
+    $xml_at = $xml->createElement('at', getStoredTimestamp(true,false, $xml));
+    $xml_rate = $xml->createElement('rate', $new);
+    $xml_oldrate = $xml->createElement('old_rate', $old[0]);
+    $xml_curr = $xml->createElement('curr');
+    $xml_action->appendChild($xml_at);
+    $xml_action->appendChild($xml_oldrate);
+    $xml_action->appendChild($xml_rate);
+    $xml_action->appendChild($xml_curr);
+    $xml_curr_code = $xml->createElement('code', $currency);
+    $xml_curr_name = $xml->createElement('name', $name[0]);
+    $xml_curr_loc = $xml->createElement('loc', $loc[0]);
+    $xml_curr->appendChild($xml_curr_code);
+    $xml_curr->appendChild($xml_curr_name);
+    $xml_curr->appendChild($xml_curr_loc);
+
+    echo $xml->saveXML();
+
+    return;
+
+
+}
 
 
 

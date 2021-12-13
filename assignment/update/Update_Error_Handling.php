@@ -5,14 +5,14 @@ require_once("../Error_Handling.php");
 
 function Update_Check_Errors($action, $cur)
 {
-    if((!isSet($action)) or (($action != "PUT") and ($action != "POST") and ($action != "DEL")))
+    if((!isSet($action)) or (($action != "put") and ($action != "post") and ($action != "del")))
     {
-        errorFormat(2000, "Action not recognized or is missing");
+        UpdateErrorFormat(2000, "Action not recognized or is missing",'NULL');
         exit();
     }
     if(!isSet($cur))
     {
-        errorFormat(2100, "Currency code in wrong format or is missing");
+        UpdateErrorFormat(2100, "Currency code in wrong format or is missing",$action);
         exit();
     }
 
@@ -20,15 +20,17 @@ function Update_Check_Errors($action, $cur)
 
     $curCheck = $xmlStorage->xpath(sprintf('/store/currencies/currency[@code="%s"]', $cur));
 
-    if(empty($curCheck))
+    $liveCheck = $xmlStorage->xpath('/store/currencies/currency[@code="'. $cur . '"]/live');
+
+    if((empty($curCheck)) or ($liveCheck[0] == 0))
     {
-        errorFormat(2200, "Currency code not found for update");
+        UpdateErrorFormat(2200, "Currency code not found for update", $action);
         exit();
     }
 
     if($cur == "GBP")
     {
-        errorFormat(2400, "Cannot update the base currency");
+        UpdateErrorFormat(2400, "Cannot update the base currency", $action);
         exit();
     }
 

@@ -1,10 +1,14 @@
 <?php
 
+
+
 //!-------------------EXAMPLE--------------------------
-//?http://localhost:8080/atwd1/assignment/update/?cur=EUR&action=PUT
+//?http://localhost:8080/atwd1/assignment/update/?cur=EUR&action=del
 //!-----------------------------------------------------
 
+require_once("../Config.php");
 require_once("Update_Error_Handling.php");
+require_once("../XML_Generator.php");
 
 $xmlStorage = simplexml_load_file("../XMLStore.xml");
 
@@ -35,19 +39,42 @@ else
 
 
 
-if($action == "DEL")
+if($action == "del")
 {
-    $doc = new DOMDocument();
-    $doc->load("../XMLStore.xml");
 
-    $xpath = new DOMXPath($doc);
+    $rqstedCur = $xmlStorage->xpath('/store/currencies/currency[@code="' . $cur . '"]');
+    $rqstedCur[0]->live = 0;
 
-    $element = $xpath->query('/store/currencies/currency[@code="' . $cur . '"]/live');
-    var_dump($element->item(0));
-    $element->item(0)->nodeValue = 0;
+    $xmlStorage->saveXML("../XMLStore.xml");
 
-    $DELOutput = $doc->save("../XMLStore.xml");
 
+    echo DeleteLiveValue($xmlStorage, $cur);
+
+}
+else if($action == "post")
+{
+    $rqstedCur = $xmlStorage->xpath('/store/currencies/currency[@code="' . $cur . '"]');
+    $rqstedCur[0]->live = 1;
+    
+    $xmlStorage->saveXML("../XMLStore.xml");
+
+    echo PostLiveValue($xmlStorage, $cur);
+
+}
+else
+{
+    $rqstedCur = $xmlStorage->xpath('/store/currencies/currency[@code="' . $cur . '"]');
+    $oldRate = $rqstedCur[0]->rate;
+
+    $newRate = getAPIValues()['data'][$cur];
+    $GBPRate = getAPIValues()['data']['GBP'];
+    $newRate = $newRate/$GBPRate;
+
+    $rqstedCur[0]->rate = $newRate;
+    $xmlStorage->saveXML("../XMLStore.xml");
+
+    echo PutLiveValue($xmlStorage, $cur, $oldRate, $newRate);
+    
 
 }
 
