@@ -821,7 +821,7 @@
             <rate>1.170585279416</rate>
             <name>Euro</name>
             <loc>Europe Union</loc>
-            <live>1</live>
+            <live>0</live>
         </currency>
         <currency code="LTC">
             <rate>0</rate>
