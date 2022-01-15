@@ -28,8 +28,88 @@
                 <label class="form-check-label" for="inlineCheckbox3">DEL</label>
               </div><br>
               <select name="codes" id="codes"></select></br>
-            <button type="button">Submit</button>
+            <button type="button" name="submit">Submit</button>
+            <script>
 
+
+              $(document).ready(function(){
+                $("button").click(ready);
+              });
+
+              function ready()
+              {
+                var getAction = document.getElementsByName('action');
+                var getCode = document.getElementById('codes');
+
+                for (var i = 0, length = getAction.length; i < length; i++) {
+                  if (getAction[i].checked) {
+                    var selectedAction = getAction[i].value;
+                    break;
+                  }
+                }
+                console.log(getCode.value);
+                console.log(selectedAction);
+              }
+
+
+
+            //   $.ajax({
+            //     url: 'http://localhost:8080/atwd1/assignment/XMLStore.xml',
+            //     dataType: 'text',
+            //     contentType: 'text/plain',
+            //     success: function(data){
+            //     $('input[type=radio][name=action]').change(function() {
+            //       $('#codes').find('option').remove();
+            //       if (this.value == 'PUT')
+            //       {
+            //         $(data).find('currencies').each(function(){
+            //           $(this).find('currency').each(function(){
+            //               var code = $(this).attr('code');
+            //               $('#codes').append('<option value="' + code + '">' + code + '</option>');
+            //           })
+            //         })
+            //       }
+            //       else if ( this.value == 'POST')
+            //       {
+            //         $(data).find('currencies').each(function(){
+            //           $(this).find('currency').each(function(){
+            //               var live = $(this).find("live").text();
+            //               if (live == 0)
+            //               {
+            //                 var code = $(this).attr('code');
+            //                 $('#codes').append('<option value="' + code + '">' + code + '</option>');
+            //               }
+
+            //           })
+            //         })
+            //       }
+            //       else if ( this.value == 'DEL')
+            //       {
+            //         $(data).find('currencies').each(function(){
+            //           $(this).find('currency').each(function(){
+            //               var live = $(this).find("live").text();
+            //               if (live == 1)
+            //               {
+            //                 var code = $(this).attr('code');
+            //                 $('#codes').append('<option value="' + code + '">' + code + '</option>');
+            //               }
+
+            //           })
+            //         })
+            //       }
+
+
+            //     })
+            //     },
+            //     error: function(){
+            //         console.log('ERROR');
+            //     }
+
+
+
+
+            // });
+            </script>
         </form>
 
         <label for="response">XML Response:</label><br>
