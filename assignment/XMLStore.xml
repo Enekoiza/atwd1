@@ -3,7 +3,7 @@
     <timestamp>1638379992</timestamp>
     <currencies>
         <currency code="JPY">
-            <rate>150.01446404594</rate>
+            <rate>156.67160362135</rate>
             <name>Japanese Yen</name>
             <loc>Japan</loc>
             <live>1</live>
@@ -12,13 +12,13 @@
             <rate>8.4674625437045</rate>
             <name>Renminbi</name>
             <loc>Republic of China</loc>
-            <live>1</live>
+            <live>0</live>
         </currency>
         <currency code="CHF">
             <rate>1.2231557676713</rate>
             <name>Swiss Franc</name>
             <loc>Switzerland, Liechtenstein, Campione d'Italia</loc>
-            <live>1</live>
+            <live>0</live>
         </currency>
         <currency code="CAD">
             <rate>1.6995918692918</rate>
@@ -54,13 +54,13 @@
             <rate>1552.7867217931</rate>
             <name>South Korean Won</name>
             <loc>South Korea</loc>
-            <live>0</live>
+            <live>1</live>
         </currency>
         <currency code="IDR">
             <rate>19064.114196833</rate>
             <name>Indonesian Rupiah</name>
             <loc>Indonesia</loc>
-            <live>0</live>
+            <live>1</live>
         </currency>
         <currency code="TRY">
             <rate>17.44978131107</rate>

@@ -28,150 +28,67 @@
                 <label class="form-check-label" for="inlineCheckbox3">DEL</label>
               </div><br>
               <select name="codes" id="codes"></select></br>
-            <button type="button" name="submit">Submit</button>
-            <script>
+            <button type="button" name="submit" id="submit">Submit</button>
+            
 
 
-              $(document).ready(function(){
-                $("button").click(ready);
-              });
+<script>
 
-              // function loadXML(URL)
-              // {
-              //   xmlhttp = new XMLHttpRequest();
+$(document).ready(function() 
+  {
+    $('#submit').click(function()
+    {
+      var getAction = document.getElementsByName('action');
+      var getCode = document.getElementById('codes').value;
 
-              //   xmlhttp.onreadystatechange=function()
-              //   {
-              //     if (xmlhttp.readyState==4 && xmlhttp.status==200)
-              //     {
-              //         alert(xmlhttp.responseText);
-              //     }
-              //   }
-              //   xmlhttp.open("GET", URL, false);
-              //   xmlhttp.send();
-              // }
+      for (var i = 0, length = getAction.length; i < length; i++) {
+        if (getAction[i].checked) {
+          var selectedAction = getAction[i].value;
+          break;
+        }
+      }
+      var urls = 'http://localhost:8080/atwd1/assignment/update/?cur=' + getCode + '&action=' + selectedAction.toLowerCase();
 
+      var xhr = new XMLHttpRequest;
+      xhr.open('GET', urls);
 
+      // If specified, responseType must be empty string or "document"
+      xhr.responseType = 'document';
 
+      // Force the response to be parsed as XML
+      xhr.overrideMimeType('text/xml');
 
-
-              function ready()
-              {
-                var getAction = document.getElementsByName('action');
-                var getCode = document.getElementById('codes').value;
-
-                for (var i = 0, length = getAction.length; i < length; i++) {
-                  if (getAction[i].checked) {
-                    var selectedAction = getAction[i].value;
-                    break;
-                  }
-                }
-                var urls = 'http://localhost:8080/atwd1/assignment/update/?cur=' + getCode + '&action=' + selectedAction;
-
-                var parser, xmlDoc;
-
-                parser = new DOMParser;
-                xmlDoc = parser.parseFromString()
-
-                // var xmlhttp = false;
-                // loadXML(urls);
-                // alert(xmlhttp);
-                // if(xmlhttp == false)
-                // {
-                //   alert('error');
-                // }
-                // else
-                // {
-                //   result = xmlhttp.Text;
-                // }
-
-                alert(result);
-                
-                // $.ajax({
-                //   cache: false,
-                //   url: 'http://localhost:8080/atwd1/assignment/update/?cur=EUR&action=POST',
-                //   dataType: 'text',
-                //   contentType: 'text/plain',
-                //   sucess: function(data){
-                //     alert(data);
-                //     $("#response").val(data);
-                //     document.getElementById("response").value = vkbeautify.xml(document.getElementById("response").value);
-                //     CodeMirror.fromTextArea(document.getElementById("response"), {
-                //       mode: 'application/xml',
-                //       theme: 'eclipse',
-                //       lineNumbers: true,
-                //       lineWrapping: true,
-                //       readOnly: true,
-                //       cursorBlinkRate: -1
-                //     });
-                //   },
-                //   error: function(){
-                //     console.log('ERROR');
-                //   }
-                  
-                // });
-                // $.ajax();
-
-              }
+      xhr.onload = function () {
+        if (xhr.readyState === xhr.DONE && xhr.status === 200) {
+          console.log(xhr.response, xhr.responseXML);
+          var xmlDoc = xhr.responseXML;
+          var x = xmlDoc.getElementsByTagName("error").length;
+          if(x == 0)
+          {
+            var select = document.getElementById('codes');
+            select.remove(getCode);
+          }
+          document.getElementById('response').value = new XMLSerializer().serializeToString(xhr.responseXML);
+          document.getElementById("response").value = vkbeautify.xml(document.getElementById("response").value);
+          CodeMirror.fromTextArea(document.getElementById("response"), {
+            mode: 'application/xml',
+            //theme: 'eclipse',
+            lineNumbers: true,
+            lineWrapping: true,
+            readOnly: true,
+            cursorBlinkRate: -1
+          });
+        }
+      }
+        xhr.send();
 
 
 
-            //   $.ajax({
-            //     url: 'http://localhost:8080/atwd1/assignment/XMLStore.xml',
-            //     dataType: 'text',
-            //     contentType: 'text/plain',
-            //     success: function(data){
-            //     $('input[type=radio][name=action]').change(function() {
-            //       $('#codes').find('option').remove();
-            //       if (this.value == 'PUT')
-            //       {
-            //         $(data).find('currencies').each(function(){
-            //           $(this).find('currency').each(function(){
-            //               var code = $(this).attr('code');
-            //               $('#codes').append('<option value="' + code + '">' + code + '</option>');
-            //           })
-            //         })
-            //       }
-            //       else if ( this.value == 'POST')
-            //       {
-            //         $(data).find('currencies').each(function(){
-            //           $(this).find('currency').each(function(){
-            //               var live = $(this).find("live").text();
-            //               if (live == 0)
-            //               {
-            //                 var code = $(this).attr('code');
-            //                 $('#codes').append('<option value="' + code + '">' + code + '</option>');
-            //               }
-
-            //           })
-            //         })
-            //       }
-            //       else if ( this.value == 'DEL')
-            //       {
-            //         $(data).find('currencies').each(function(){
-            //           $(this).find('currency').each(function(){
-            //               var live = $(this).find("live").text();
-            //               if (live == 1)
-            //               {
-            //                 var code = $(this).attr('code');
-            //                 $('#codes').append('<option value="' + code + '">' + code + '</option>');
-            //               }
-
-            //           })
-            //         })
-            //       }
-
-
-            //     })
-            //     },
-            //     error: function(){
-            //         console.log('ERROR');
-            //     }
+    });
+  });
 
 
 
-
-            // });
             </script>
         </form>
 

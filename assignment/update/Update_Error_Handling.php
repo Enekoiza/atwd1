@@ -22,7 +22,7 @@ function Update_Check_Errors($action, $cur)
 
     $liveCheck = $xmlStorage->xpath('/store/currencies/currency[@code="'. $cur . '"]/live');
 
-    if((empty($curCheck)) or ($liveCheck[0] == 0))
+    if((empty($curCheck)) or ($liveCheck[0] == 0 and $action == "put"))
     {
         UpdateErrorFormat(2200, "Currency code not found for update", $action);
         exit();

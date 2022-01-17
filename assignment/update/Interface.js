@@ -1,4 +1,5 @@
 $.ajax({
+    cache: false,
     url: 'http://localhost:8080/atwd1/assignment/XMLStore.xml',
     dataType: 'text',
     contentType: 'text/plain',
