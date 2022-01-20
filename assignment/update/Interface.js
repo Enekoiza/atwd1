@@ -1,3 +1,5 @@
+
+//jQuery to autogenerate the dropdown menu with the values inside the xml storage.
 $.ajax({
     cache: false,
     url: 'http://localhost:8080/atwd1/assignment/XMLStore.xml',

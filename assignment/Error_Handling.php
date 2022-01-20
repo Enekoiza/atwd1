@@ -2,7 +2,7 @@
 
 require_once "Config.php";
 
-
+//A function to create the error output for the API
 function errorFormat($errorCode, $errorMessage)
 {
     header('Content-Type:text/xml');
@@ -21,6 +21,7 @@ function errorFormat($errorCode, $errorMessage)
     
 }
 
+//A function to create the error for the interface
 function UpdateErrorFormat($errorCode, $errorMessage, $act)
 {
     header('Content-Type:text/xml');
@@ -41,7 +42,7 @@ function UpdateErrorFormat($errorCode, $errorMessage, $act)
     
 }
 
-
+//A function that performs the error handling of the API, printing the xml output with the errors.
 function checkErrors($from = 0, $to = 0, $amnt = 0, $format = 0)
     {
     

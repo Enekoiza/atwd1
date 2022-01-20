@@ -2,7 +2,7 @@
 
 require_once("../Error_Handling.php");
 
-
+//Function that gets the values from the url and check if an error condition is true
 function Update_Check_Errors($action, $cur)
 {
     if((!isSet($action)) or (($action != "put") and ($action != "post") and ($action != "del")))

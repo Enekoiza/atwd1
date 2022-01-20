@@ -1,806 +1,806 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <store>
-    <timestamp>1638379992</timestamp>
+    <timestamp>1642692880</timestamp>
     <currencies>
         <currency code="JPY">
-            <rate>156.67160362135</rate>
+            <rate>155.57509372231</rate>
             <name>Japanese Yen</name>
             <loc>Japan</loc>
             <live>1</live>
         </currency>
         <currency code="CNY">
-            <rate>8.4674625437045</rate>
+            <rate>8.6495126439915</rate>
             <name>Renminbi</name>
             <loc>Republic of China</loc>
             <live>0</live>
         </currency>
         <currency code="CHF">
-            <rate>1.2231557676713</rate>
+            <rate>1.2473587349192</rate>
             <name>Swiss Franc</name>
             <loc>Switzerland, Liechtenstein, Campione d'Italia</loc>
             <live>0</live>
         </currency>
         <currency code="CAD">
-            <rate>1.6995918692918</rate>
+            <rate>1.70192897553</rate>
             <name>Canadian Dollar</name>
             <loc>Canada</loc>
             <live>1</live>
         </currency>
         <currency code="MXN">
-            <rate>28.333962590234</rate>
+            <rate>27.921000613455</rate>
             <name>Mexican Peso</name>
             <loc>Mexico</loc>
             <live>1</live>
         </currency>
         <currency code="INR">
-            <rate>99.485835072653</rate>
+            <rate>101.34660214028</rate>
             <name>Indian Rupee</name>
             <loc>India, Bhutan, Nepal</loc>
             <live>1</live>
         </currency>
         <currency code="BRL">
-            <rate>7.4917642679571</rate>
+            <rate>7.386817531184</rate>
             <name>Brazilian Real</name>
             <loc>Brazil</loc>
             <live>1</live>
         </currency>
         <currency code="RUB">
-            <rate>98.402547161032</rate>
+            <rate>104.38524981256</rate>
             <name>Russian Ruble</name>
             <loc>Russia</loc>
             <live>1</live>
         </currency>
         <currency code="KRW">
-            <rate>1552.7867217931</rate>
+            <rate>1615.2630222889</rate>
             <name>South Korean Won</name>
             <loc>South Korea</loc>
             <live>1</live>
         </currency>
         <currency code="IDR">
-            <rate>19064.114196833</rate>
+            <rate>19542.516392884</rate>
             <name>Indonesian Rupiah</name>
             <loc>Indonesia</loc>
             <live>1</live>
         </currency>
         <currency code="TRY">
-            <rate>17.44978131107</rate>
+            <rate>18.246268148047</rate>
             <name>Turkish Lira</name>
             <loc>Turkey, Northen Cyprus</loc>
             <live>1</live>
         </currency>
         <currency code="SAR">
-            <rate>4.9868387817232</rate>
+            <rate>5.1136936814123</rate>
             <name>Saudi Riyal</name>
             <loc>Saudi Arabia</loc>
             <live>0</live>
         </currency>
         <currency code="SEK">
-            <rate>12.03846000452</rate>
+            <rate>12.444836752778</rate>
             <name>Swedish Krona</name>
             <loc>Sweeden</loc>
             <live>1</live>
         </currency>
         <currency code="NGN">
-            <rate>544.61595830951</rate>
+            <rate>564.61749028696</rate>
             <name>Malagasy Ariary</name>
             <loc>Madagascar</loc>
             <live>0</live>
         </currency>
         <currency code="PLN">
-            <rate>5.4154026136318</rate>
+            <rate>5.4381432758503</rate>
             <name>Polish zloty</name>
             <loc>Poland</loc>
             <live>0</live>
         </currency>
         <currency code="ARS">
-            <rate>134.28688797011</rate>
+            <rate>142.1741803558</rate>
             <name>Argentine Peso</name>
             <loc>Argentina</loc>
             <live>0</live>
         </currency>
         <currency code="NOK">
-            <rate>12.036452586379</rate>
+            <rate>11.952273192011</rate>
             <name>Krone</name>
             <loc>Norway</loc>
             <live>1</live>
         </currency>
         <currency code="TWD">
-            <rate>36.773414339081</rate>
+            <rate>37.659955013292</rate>
             <name>New Taiwan Dollar</name>
             <loc>Republic of China(Taiwan)</loc>
             <live>0</live>
         </currency>
         <currency code="IRR">
-            <rate>55836.874582896</rate>
+            <rate>57257.460241292</rate>
             <name>Iranian Rial</name>
             <loc>Iran</loc>
             <live>0</live>
         </currency>
         <currency code="AED">
-            <rate>4.8824663325401</rate>
+            <rate>5.0070888146684</rate>
             <name>United Arab Emirates Dirham</name>
             <loc>United Arab Emirates</loc>
             <live>0</live>
         </currency>
         <currency code="COP">
-            <rate>5260.8283989843</rate>
+            <rate>5428.0169313612</rate>
             <name>Colombian Peso</name>
             <loc>Colombia</loc>
             <live>0</live>
         </currency>
         <currency code="THB">
-            <rate>44.762127597346</rate>
+            <rate>44.728280280826</rate>
             <name>Baht</name>
             <loc>Thailand</loc>
             <live>1</live>
         </currency>
         <currency code="ZAR">
-            <rate>21.169739833291</rate>
+            <rate>20.655183695726</rate>
             <name>South African Rand</name>
             <loc>South Africa, Namibia, Lesotho, Eswatini</loc>
             <live>1</live>
         </currency>
         <currency code="DKK">
-            <rate>8.7303146727643</rate>
+            <rate>8.9510053847727</rate>
             <name>Danish Krone</name>
             <loc>Denmark, Greenland, Faroe Islands</loc>
             <live>1</live>
         </currency>
         <currency code="MYR">
-            <rate>5.6076361654325</rate>
+            <rate>5.7079544679981</rate>
             <name>Malaysian Ringgit</name>
             <loc>Malaysia</loc>
             <live>1</live>
         </currency>
         <currency code="SGD">
-            <rate>1.8128714055915</rate>
+            <rate>1.8327176061618</rate>
             <name>Singapore Dollar</name>
             <loc>Singapore, Brunei</loc>
             <live>1</live>
         </currency>
         <currency code="ILS">
-            <rate>4.1930976721926</rate>
+            <rate>4.2679435621294</rate>
             <name>Israel New Shekel</name>
             <loc>Israel, Palestinian Authority</loc>
             <live>0</live>
         </currency>
         <currency code="HKD">
-            <rate>10.358290902806</rate>
+            <rate>10.613591438893</rate>
             <name>Hong Kong Dollar</name>
             <loc>Hong Kong</loc>
             <live>1</live>
         </currency>
         <currency code="EGP">
-            <rate>20.91563526143</rate>
+            <rate>21.348837843364</rate>
             <name>Egypcian Pound</name>
             <loc>Egypt</loc>
             <live>0</live>
         </currency>
         <currency code="PHP">
-            <rate>66.92417011207</rate>
+            <rate>69.999604662259</rate>
             <name>Philippine Peso</name>
             <loc>Philippines</loc>
             <live>1</live>
         </currency>
         <currency code="CLP">
-            <rate>1113.6990733971</rate>
+            <rate>1096.6408015814</rate>
             <name>Chilean Peso</name>
             <loc>Chile</loc>
             <live>0</live>
         </currency>
         <currency code="PKR">
-            <rate>232.66369763763</rate>
+            <rate>240.27646377207</rate>
             <name>Pakistani Rupee</name>
             <loc>Pakistan</loc>
             <live>0</live>
         </currency>
         <currency code="IQD">
-            <rate>1938.3212134909</rate>
+            <rate>1988.3553404676</rate>
             <name>Iraqi Dinar</name>
             <loc>Iraq</loc>
             <live>0</live>
         </currency>
         <currency code="DZD">
-            <rate>183.9682934287</rate>
+            <rate>189.99188876014</rate>
             <name>Algerian Dinar</name>
             <loc>Algeria</loc>
             <live>0</live>
         </currency>
         <currency code="KZT">
-            <rate>579.74580236902</rate>
+            <rate>594.08363438075</rate>
             <name>Kazakhstani Tenge</name>
             <loc>Kazakhstan</loc>
             <live>0</live>
         </currency>
         <currency code="QAR">
-            <rate>4.8694912325016</rate>
+            <rate>4.9833958148729</rate>
             <name>Qatari Riyal</name>
             <loc>Qatar</loc>
             <live>0</live>
         </currency>
         <currency code="CZK">
-            <rate>29.897741322237</rate>
+            <rate>29.159034830618</rate>
             <name>Czech Koruna</name>
             <loc>Czech Republic</loc>
             <live>0</live>
         </currency>
         <currency code="PEN">
-            <rate>5.4068677629917</rate>
+            <rate>5.2551427987186</rate>
             <name>Peruvian Sol</name>
             <loc>Peru</loc>
             <live>0</live>
         </currency>
         <currency code="RON">
-            <rate>5.8046290264687</rate>
+            <rate>5.9430986299502</rate>
             <name>Romanian Leu</name>
             <loc>Romania</loc>
             <live>0</live>
         </currency>
         <currency code="VND">
-            <rate>30191.488746494</rate>
+            <rate>30870.851353009</rate>
             <name>Vietnamese Dong</name>
             <loc>Vietnam</loc>
             <live>0</live>
         </currency>
         <currency code="BDT">
-            <rate>113.93386155462</rate>
+            <rate>117.17195828505</rate>
             <name>Bangladeshi Taka</name>
             <loc>Bangladesh</loc>
             <live>0</live>
         </currency>
         <currency code="HUF">
-            <rate>425.48878637614</rate>
+            <rate>427.71587485516</rate>
             <name>Hungarian Forint</name>
             <loc>Hungary</loc>
             <live>1</live>
         </currency>
         <currency code="UAH">
-            <rate>36.360338203427</rate>
+            <rate>38.579755981187</rate>
             <name>Ukrainian Hryvnia</name>
             <loc>Ukraine</loc>
             <live>0</live>
         </currency>
         <currency code="AOA">
-            <rate>775.06402467396</rate>
+            <rate>725.02632404062</rate>
             <name>Angolan Kwanza</name>
             <loc>Angola</loc>
             <live>0</live>
         </currency>
         <currency code="MAD">
-            <rate>12.262892011539</rate>
+            <rate>12.657869265899</rate>
             <name>Moroccan Dirham</name>
             <loc>Morocco</loc>
             <live>0</live>
         </currency>
         <currency code="OMR">
-            <rate>0.51170550777044</rate>
+            <rate>0.52444959443801</rate>
             <name>Omani Rial</name>
             <loc>Oman</loc>
             <live>0</live>
         </currency>
         <currency code="CUC">
-            <rate>31.906914292551</rate>
+            <rate>32.717974234885</rate>
             <name>Cuban Convertible Peso</name>
             <loc>Cuba</loc>
             <live>0</live>
         </currency>
         <currency code="BYR">
-            <rate>3.9883410217891</rate>
+            <rate>3.4982618771727</rate>
             <name>Belarusian Ruble</name>
             <loc>Belarus</loc>
             <live>0</live>
         </currency>
         <currency code="AZN">
-            <rate>2.2507544435729</rate>
+            <rate>2.3107354645218</rate>
             <name>Azerbaijani Manat</name>
             <loc>Azerbaijan</loc>
             <live>0</live>
         </currency>
         <currency code="LKR">
-            <rate>267.21561797902</rate>
+            <rate>275.38094199441</rate>
             <name>Sri Lankan Rupee</name>
             <loc>Sri Lanka</loc>
             <live>0</live>
         </currency>
         <currency code="SDG">
-            <rate>580.0916765265</rate>
+            <rate>595.75283211778</rate>
             <name>Sudanese Pound</name>
             <loc>Sudan</loc>
             <live>0</live>
         </currency>
         <currency code="SYP">
-            <rate>3338.2301352016</rate>
+            <rate>3423.1476927271</rate>
             <name>Syrian Pound</name>
             <loc>Syria</loc>
             <live>0</live>
         </currency>
         <currency code="MMK">
-            <rate>2361.7645604286</rate>
+            <rate>2412.311485243</rate>
             <name>Myanmar Kyat</name>
             <loc>Myanmar</loc>
             <live>0</live>
         </currency>
         <currency code="DOP">
-            <rate>75.193443320349</rate>
+            <rate>78.632404062436</rate>
             <name>Dominican Peso</name>
             <loc>Dominican Republic</loc>
             <live>0</live>
         </currency>
         <currency code="UZS">
-            <rate>14306.124021217</rate>
+            <rate>14739.987349192</rate>
             <name>Uzbekistani som</name>
             <loc>Uzbekistan</loc>
             <live>0</live>
         </currency>
         <currency code="KES">
-            <rate>149.56356602544</rate>
+            <rate>154.66339036194</rate>
             <name>Kenyan Shilling</name>
             <loc>Kenya</loc>
             <live>0</live>
         </currency>
         <currency code="GTQ">
-            <rate>10.272689807368</rate>
+            <rate>10.497144025629</rate>
             <name>Guatemalan Quetzal</name>
             <loc>Guatemala</loc>
             <live>0</live>
         </currency>
         <currency code="URY">
-            <rate>58.495991810798</rate>
+            <rate>60.760289005521</rate>
             <name>Uruguay Peso</name>
             <loc>Uruguay</loc>
             <live>0</live>
         </currency>
         <currency code="HRV">
-            <rate>8.8371465415243</rate>
+            <rate>9.0330038852157</rate>
             <name>Croatian Kuna</name>
             <loc>Croatia</loc>
             <live>0</live>
         </currency>
         <currency code="MOP">
-            <rate>10.668882359979</rate>
+            <rate>10.932083702542</rate>
             <name>Macanese Pataca</name>
             <loc>Macau</loc>
             <live>0</live>
         </currency>
         <currency code="ETB">
-            <rate>63.734183273288</rate>
+            <rate>67.58131006748</rate>
             <name>Ethiopian Birr</name>
             <loc>Ethiopia</loc>
             <live>0</live>
         </currency>
         <currency code="CRC">
-            <rate>833.36892623071</rate>
+            <rate>860.58297321246</rate>
             <name>Costa Rican Colon</name>
             <loc>Costa Rica</loc>
             <live>0</live>
         </currency>
         <currency code="TZS">
-            <rate>3053.7547094561</rate>
+            <rate>3139.5660554836</rate>
             <name>Tanzanian Shilling</name>
             <loc>Tanzania</loc>
             <live>0</live>
         </currency>
         <currency code="TMT">
-            <rate>4.6397814440116</rate>
+            <rate>4.7578215527231</rate>
             <name>Turkmenistani Manat</name>
             <loc>Turkmenistan</loc>
             <live>0</live>
         </currency>
         <currency code="TND">
-            <rate>3.8144401164568</rate>
+            <rate>3.9177288528389</rate>
             <name>Tunisian Dinar</name>
             <loc>Tunisia</loc>
             <live>0</live>
         </currency>
         <currency code="PAB">
-            <rate>1.3294558700363</rate>
+            <rate>1.3632744870834</rate>
             <name>Panamanian Balboa</name>
             <loc>Panama</loc>
             <live>0</live>
         </currency>
         <currency code="LBP">
-            <rate>2001.4637800614</rate>
+            <rate>2052.3948333447</rate>
             <name>Lebanese Pound</name>
             <loc>Lebanon</loc>
             <live>0</live>
         </currency>
         <currency code="RSD">
-            <rate>137.99558633892</rate>
+            <rate>141.34192624906</rate>
             <name>Serbian Dinar</name>
             <loc>Serbia</loc>
             <live>0</live>
         </currency>
         <currency code="LYD">
-            <rate>6.091663232342</rate>
+            <rate>6.2367527775884</rate>
             <name>Lybian Dinar</name>
             <loc>Libya</loc>
             <live>0</live>
         </currency>
         <currency code="GHS">
-            <rate>8.0164980524056</rate>
+            <rate>8.2613046145457</rate>
             <name>Ghanaian Cedi</name>
             <live>0</live>
         </currency>
         <currency code="YER">
-            <rate>332.29426622885</rate>
+            <rate>340.81709494922</rate>
             <name>Yemeni Rial</name>
             <loc>Yemen</loc>
             <live>0</live>
         </currency>
         <currency code="BOB">
-            <rate>9.080017548291</rate>
+            <rate>9.2838797627974</rate>
             <name>Shiling</name>
             <loc>United Kingdom</loc>
             <live>0</live>
         </currency>
         <currency code="BHD">
-            <rate>0.50120312146874</rate>
+            <rate>0.51381637243542</rate>
             <name>Bahraini Dinar</name>
             <loc>Bahrain</loc>
             <live>0</live>
         </currency>
         <currency code="CDF">
-            <rate>2651.1730367849</rate>
+            <rate>2723.9224183764</rate>
             <name>Congolese Franc</name>
             <loc>Democratic Republic of Congo</loc>
             <live>0</live>
         </currency>
         <currency code="PYG">
-            <rate>9067.6428258066</rate>
+            <rate>9534.4917865176</rate>
             <name>Paraguayan guarani</name>
             <loc>Paraguay</loc>
             <live>0</live>
         </currency>
         <currency code="UGX">
-            <rate>4730.1583334441</rate>
+            <rate>4797.3455115534</rate>
             <name>Ugandan Shilling</name>
             <loc>Uganda</loc>
             <live>0</live>
         </currency>
         <currency code="SVC">
-            <rate>11.632336714481</rate>
+            <rate>11.927844046077</rate>
             <name>Salvadoran Colon</name>
             <loc>El Salvador</loc>
             <live>0</live>
         </currency>
         <currency code="TTD">
-            <rate>8.9458927693064</rate>
+            <rate>9.2134142185263</rate>
             <name>Trinidad and Tobago Dollar</name>
             <loc>Trinidad and Tobago</loc>
             <live>0</live>
         </currency>
         <currency code="AFN">
-            <rate>127.36012549687</rate>
+            <rate>142.46043214505</rate>
             <name>Afghan Afghani</name>
             <loc>Afghanistan</loc>
             <live>0</live>
         </currency>
         <currency code="NPR">
-            <rate>159.33486659311</rate>
+            <rate>162.50225615159</rate>
             <name>Nepalese Rupee</name>
             <loc>Nepal</loc>
             <live>0</live>
         </currency>
         <currency code="HNL">
-            <rate>32.018611823826</rate>
+            <rate>33.288064889919</rate>
             <name>Honduran Lempira</name>
             <loc>Honduras</loc>
             <live>0</live>
         </currency>
         <currency code="BIH">
-            <rate>2.29808165273</rate>
+            <rate>2.348074432554</rate>
             <name>Bosnia and Herzegovina convertible mark</name>
             <loc>Bosnia and Herzegovina</loc>
             <live>0</live>
         </currency>
         <currency code="BND">
-            <rate>1.8129777588705</rate>
+            <rate>1.8322132097335</rate>
             <name>Brunei Dollar</name>
             <loc>Brunei, Singapore</loc>
             <live>0</live>
         </currency>
         <currency code="ISK">
-            <rate>171.94853830712</rate>
+            <rate>174.64895371822</rate>
             <name>Iceland Krona</name>
             <loc>Iceland</loc>
             <live>0</live>
         </currency>
         <currency code="KHR">
-            <rate>5397.4886800229</rate>
+            <rate>5537.5520141776</rate>
             <name>Cambodian Riel</name>
             <loc>Cambodia</loc>
             <live>0</live>
         </currency>
         <currency code="GEL">
-            <rate>4.1345900745802</rate>
+            <rate>4.1716038443187</rate>
             <name>Georgian Lari</name>
             <loc>Georgia</loc>
             <live>0</live>
         </currency>
         <currency code="MZN">
-            <rate>84.020114063892</rate>
+            <rate>86.157289891623</rate>
             <name>Mozambican Metical</name>
             <loc>Mozambique</loc>
             <live>0</live>
         </currency>
         <currency code="BWP">
-            <rate>15.521822363436</rate>
+            <rate>15.687792243201</rate>
             <name>Botswana Pula</name>
             <loc>Botswana</loc>
             <live>0</live>
         </currency>
         <currency code="PGK">
-            <rate>4.7085255447282</rate>
+            <rate>4.787635471338</rate>
             <name>Papua New Guinean Kina</name>
             <loc>Papua New Guinean</loc>
             <live>0</live>
         </currency>
         <currency code="JMD">
-            <rate>205.26476648808</rate>
+            <rate>210.05022152546</rate>
             <name>Jamaican Dollar</name>
             <loc>Jamaica</loc>
             <live>0</live>
         </currency>
         <currency code="XAF">
-            <rate>770.16529958389</rate>
+            <rate>787.5318383205</rate>
             <name>Central African CFA Franc</name>
             <loc>Cameroon, Central African Republic, Chad, Republic of Congo, Equatorial Guinea, Gabon</loc>
             <live>0</live>
         </currency>
         <currency code="NAD">
-            <rate>21.16452852262</rate>
+            <rate>20.645245722855</rate>
             <name>Namibian Dollar</name>
             <loc>Namibia</loc>
             <live>0</live>
         </currency>
         <currency code="ALL">
-            <rate>141.83963254942</rate>
+            <rate>145.93603707995</rate>
             <name>Albanian Lek</name>
             <loc>Albania</loc>
             <live>0</live>
         </currency>
         <currency code="SSP">
-            <rate>539.91360125497</rate>
+            <rate>584.09267261945</rate>
             <name>South Sudanese Pound</name>
             <loc>South Sudan</loc>
             <live>0</live>
         </currency>
         <currency code="MUR">
-            <rate>57.896943672645</rate>
+            <rate>59.847617749301</rate>
             <name>Mauritanian Rupee</name>
             <loc>Mauritius</loc>
             <live>0</live>
         </currency>
         <currency code="MNT">
-            <rate>3755.6379202616</rate>
+            <rate>3864.8671801513</rate>
             <name>Mongolian Togrog</name>
             <loc>Mongolia</loc>
             <live>0</live>
         </currency>
         <currency code="NIO">
-            <rate>46.810013161218</rate>
+            <rate>48.273532819849</rate>
             <name>Nicaraguan Cordoba</name>
             <loc>Nicaragua</loc>
             <live>0</live>
         </currency>
         <currency code="LAK">
-            <rate>14391.338283192</rate>
+            <rate>15413.514961489</rate>
             <name>Lao Kip</name>
             <loc>Lao People's Democratic Republic</loc>
             <live>0</live>
         </currency>
         <currency code="MKD">
-            <rate>72.003057656771</rate>
+            <rate>73.902297048599</rate>
             <name>Macedonian Cenar</name>
             <loc>North Macedonia</loc>
             <live>0</live>
         </currency>
         <currency code="AMD">
-            <rate>645.44269552386</rate>
+            <rate>653.00428055347</rate>
             <name>Armenian Dram</name>
             <loc>Armenia</loc>
             <live>0</live>
         </currency>
         <currency code="MGA">
-            <rate>5264.6251977506</rate>
+            <rate>5420.3071637925</rate>
             <name>Malagasy Ariary</name>
             <loc>Madagascar</loc>
             <live>0</live>
         </currency>
         <currency code="XPF">
-            <rate>139.92288057856</rate>
+            <rate>143.14309862995</rate>
             <name>CFP Franc</name>
             <loc>French Polynesia, New Caledonia, Wallis and Futuna</loc>
             <live>0</live>
         </currency>
         <currency code="TJS">
-            <rate>14.996171281956</rate>
+            <rate>15.391343466703</rate>
             <name>Tajikistani Somoni</name>
             <loc>Tajikistan</loc>
             <live>0</live>
         </currency>
         <currency code="HTG">
-            <rate>130.35172358783</rate>
+            <rate>137.90180628451</rate>
             <name>Haitian Gourde</name>
             <loc>Haiti</loc>
             <live>0</live>
         </currency>
         <currency code="BSD">
-            <rate>1.3294558700363</rate>
+            <rate>1.3632608547475</rate>
             <name>Bahamian Dollar</name>
             <loc>The Bahamas</loc>
             <live>0</live>
         </currency>
         <currency code="MDL">
-            <rate>23.480982704298</rate>
+            <rate>24.470697293981</rate>
             <name>Moldovan Leu</name>
             <loc>Moldova</loc>
             <live>0</live>
         </currency>
         <currency code="RWF">
-            <rate>1358.2900785685</rate>
+            <rate>1399.5755981187</rate>
             <name>Rwandan Franc</name>
             <loc>Rwanda</loc>
             <live>0</live>
         </currency>
         <currency code="KGS">
-            <rate>112.73632363303</rate>
+            <rate>115.60201758571</rate>
             <name>Kyrgyzstani Som</name>
             <loc>Kyrgyzstan</loc>
             <live>0</live>
         </currency>
         <currency code="GNF">
-            <rate>12387.650815597</rate>
+            <rate>12255.831586122</rate>
             <name>Guinean Franc</name>
             <loc>Guinea</loc>
             <live>0</live>
         </currency>
         <currency code="SRD">
-            <rate>28.476422807461</rate>
+            <rate>28.674718833072</rate>
             <name>Surinamese Dollar</name>
             <loc>Suriname</loc>
             <live>0</live>
         </currency>
         <currency code="SLL">
-            <rate>14631.805320323</rate>
+            <rate>15496.115915752</rate>
             <name>Sierra Leonean Leone</name>
             <loc>Sierra Leona</loc>
             <live>0</live>
         </currency>
         <currency code="XOF">
-            <rate>765.09289958921</rate>
+            <rate>783.86752095972</rate>
             <name>West African CFA Franc</name>
             <loc>Benin, Burkina Faso, Guinea-Bissau, Ivory Coast, Mali, Niger, Senegal, Togo</loc>
             <live>0</live>
         </currency>
         <currency code="MWK">
-            <rate>1074.32629186</rate>
+            <rate>1101.9193102038</rate>
             <name>Malawian Kwacha</name>
             <loc>Malawi</loc>
             <live>0</live>
         </currency>
         <currency code="FJD">
-            <rate>2.8281463952885</rate>
+            <rate>2.8984527298753</rate>
             <name>Fijian Dollar</name>
             <loc>Fiji</loc>
             <live>0</live>
         </currency>
         <currency code="ERN">
-            <rate>20.034830698874</rate>
+            <rate>20.448708336173</rate>
             <name>Eritrean Nakfa</name>
             <loc>Eritrea</loc>
             <live>0</live>
         </currency>
         <currency code="SZL">
-            <rate>21.166230175084</rate>
+            <rate>20.648026719378</rate>
             <name>Swazi Lilangeni</name>
             <loc>Eswatini</loc>
             <live>0</live>
         </currency>
         <currency code="GYD">
-            <rate>276.49620451736</rate>
+            <rate>283.27398268693</rate>
             <name>Guyanese Dollar</name>
             <loc>Guyana</loc>
             <live>0</live>
         </currency>
         <currency code="BIF">
-            <rate>2638.2548756331</rate>
+            <rate>2715.932915275</rate>
             <name>Burundian Franc</name>
             <loc>Burundi</loc>
             <live>0</live>
         </currency>
         <currency code="KYD">
-            <rate>1.0901344039563</rate>
+            <rate>1.1246949764842</rate>
             <name>Cayman Islands Dollar</name>
             <loc>Cayman Islands</loc>
             <live>0</live>
         </currency>
         <currency code="MVR">
-            <rate>20.499940176281</rate>
+            <rate>21.021402767364</rate>
             <name>Maldivian Rufiyaa</name>
             <loc>Maldives</loc>
             <live>0</live>
         </currency>
         <currency code="LSL">
-            <rate>21.159742625065</rate>
+            <rate>20.639615568128</rate>
             <name>Lesotho Loti</name>
             <loc>Lesotho</loc>
             <live>0</live>
         </currency>
         <currency code="LRD">
-            <rate>187.71874875367</rate>
+            <rate>203.80823393088</rate>
             <name>Liberian Dollar</name>
             <loc>Liberia</loc>
             <live>0</live>
         </currency>
         <currency code="CVE">
-            <rate>129.46221135055</rate>
+            <rate>132.60421239179</rate>
             <name>Cape Verdean Escudo</name>
             <loc>Cabo Verde</loc>
             <live>0</live>
         </currency>
         <currency code="DJF">
-            <rate>235.97545898087</rate>
+            <rate>241.98034217163</rate>
             <name>Djiboutian Franc</name>
             <loc>Djibouti</loc>
             <live>0</live>
         </currency>
         <currency code="SCR">
-            <rate>19.139296207176</rate>
+            <rate>18.189952968441</rate>
             <name>Seychellois Rupee</name>
             <loc>Seychelles</loc>
             <live>0</live>
         </currency>
         <currency code="SOS">
-            <rate>764.42424322995</rate>
+            <rate>783.88165769205</rate>
             <name>Somali Shilling</name>
             <loc>Somalia</loc>
             <live>0</live>
         </currency>
         <currency code="GMD">
-            <rate>69.796054293349</rate>
+            <rate>72.525458387295</rate>
             <name>Gambian Dalasi</name>
             <loc>The Gambia</loc>
             <live>0</live>
         </currency>
         <currency code="KMF">
-            <rate>577.35601760147</rate>
+            <rate>591.0669075046</rate>
             <name>Comorian Franc</name>
             <loc>Comoros</loc>
             <live>0</live>
         </currency>
         <currency code="STD">
-            <rate>28.782667074354</rate>
+            <rate>29.416767773158</rate>
             <name>Sao Tome and Principe Dobra</name>
             <loc>Sao Tome and Principe</loc>
             <live>0</live>
         </currency>
         <currency code="XRP">
-            <rate>1.3294558700363</rate>
+            <rate>1.8366846159089</rate>
             <name>Ripple</name>
             <loc>Cryptocurrency</loc>
             <live>0</live>
         </currency>
         <currency code="AUD">
-            <rate>1.8608234402627</rate>
+            <rate>1.8848749233181</rate>
             <name>Auctus</name>
             <loc>Cryptocurrency</loc>
             <live>1</live>
         </currency>
         <currency code="BGN">
-            <rate>2.2964996477048</rate>
+            <rate>2.3517415309113</rate>
             <name>Bulgarian Lev</name>
             <loc>Bulgaria</loc>
             <live>0</live>
         </currency>
         <currency code="BTC">
-            <rate>0.023397721380997</rate>
+            <rate>0.032444959443801</rate>
             <name>Bitcoin</name>
             <loc>Cryptocurrency</loc>
             <live>0</live>
         </currency>
         <currency code="JOD">
-            <rate>0.94123981335</rate>
+            <rate>0.96368345716038</rate>
             <name>Jordanian Dinar</name>
             <loc>Jordan</loc>
             <live>0</live>
@@ -812,25 +812,25 @@
             <live>1</live>
         </currency>
         <currency code="ETH">
-            <rate>0.0002791773573869</rate>
+            <rate>0.00043623474882421</rate>
             <name>Ethereum</name>
             <loc>Cryptocurrency</loc>
             <live>0</live>
         </currency>
         <currency code="EUR">
-            <rate>1.170585279416</rate>
+            <rate>1.203299025288</rate>
             <name>Euro</name>
             <loc>Europe Union</loc>
-            <live>0</live>
+            <live>1</live>
         </currency>
         <currency code="LTC">
-            <rate>0</rate>
+            <rate>0.0099516052075523</rate>
             <name>Litecoin</name>
             <loc>Cryptocurrency</loc>
             <live>0</live>
         </currency>
         <currency code="NZD">
-            <rate>1.9431142898925</rate>
+            <rate>2.0132369981596</rate>
             <name>New Zealand Dollar</name>
             <loc>New Zealand</loc>
             <live>1</live>

@@ -1,12 +1,12 @@
 <?php
 
 
-
+$xml = simplexml_load_file("XMLStore.xml");
 
 
 //!------------------------------FUNCTIONS----------------------------------------
 
-//TODO Get the result from the currencies API as JSON file
+// Get the result from the currencies API as JSON file
 function getAPIValues()
 {
     $curl = curl_init();
@@ -36,8 +36,8 @@ function getAPIValues()
     return $data;
 }
 
-//TODO Returns the timestamp stored in the XML file
-//TODO If passed true it will return the value formatted
+// Returns the timestamp stored in the XML file
+// If passed true it will return the value formatted
 function getStoredTimestamp($format = false, $stored = false, $xml)
 {
     // $xml = simplexml_load_file("XMLStore.xml");
@@ -51,10 +51,41 @@ function getStoredTimestamp($format = false, $stored = false, $xml)
         return gmdate("Y-M-d H:i:s",time());
     
     }
+    else if($format == false and $stored == true)
+    {
+        return (string)$xml->xpath('/store/timestamp')[0];
+    }
+    else
+    {
+        return time();
+    }
 
-    return (string)$xml->xpath('/store/timestamp')[0];
+
 }
+//A function that check the last time it was updated and updates if that is the case
+function checkAndUpdate($xml)
+{
+    if( (getStoredTimestamp(false, false, $xml)) > (getStoredTimestamp(false, true, $xml)))
+    {
+        $TSPath = $xml->xpath('/store');
+        $TSPath[0]->timestamp = getStoredTimestamp(false, false, $xml);
+        $data = getAPIValues();
+        $GBPvalue = $data['data']['GBP'];
+        foreach($data['data'] as $key => $value)
+        {
+            $newValue = $value / $GBPvalue;
+            $ratePath = $xml->xpath('/store/currencies/currency[@code="' . $key . '"]');
+            $ratePath[0]->rate = $newValue;
+        }
+        $xml->saveXML("XMLStore.xml");
 
+        return;
+    }
+    else
+    {
+       return;
+    }
+}
 
 
 

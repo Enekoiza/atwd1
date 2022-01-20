@@ -13,10 +13,10 @@ require_once("../XML_Generator.php");
 $xmlStorage = simplexml_load_file("../XMLStore.xml");
 
 
-
+//Get the values from the URL
 extract($_GET);
 
-
+//Condition that must be surpassed, if not an error output will be generated as xml and it will kill the program
 //!---------------------------ERROR HANDLING---------------------------------
 
 if((isSet($action)) and (isSet($cur)))
@@ -38,7 +38,7 @@ else
 //!---------------------------ERROR HANDLING---------------------------------
 
 
-
+//Different types of updates
 if($action == "del")
 {
 

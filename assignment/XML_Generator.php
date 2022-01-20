@@ -2,6 +2,7 @@
 
 require_once "Config.php";
 
+//This function get the information from the uri and creates the json or xml format depending on what is expected
 function generateFormattedOutput($from, $to, $amnt, $format)
 {
     $xmlStorage = simplexml_load_file("XMLStore.xml");
@@ -87,7 +88,7 @@ function generateFormattedOutput($from, $to, $amnt, $format)
 }
 
 
-
+//A function that gets the xml object and the currency and creates an xml format output regarding the DELETE part of the update
 function DeleteLiveValue($xml, $currency)
 {
     header('Content-Type:text/xml');
@@ -108,6 +109,7 @@ function DeleteLiveValue($xml, $currency)
 
 }
 
+//A function that gets the xml object and the currency and creates an xml format output regarding the POST part of the update
 function PostLiveValue($xml, $currency)
 {
 
@@ -140,6 +142,7 @@ function PostLiveValue($xml, $currency)
     return;
 }
 
+//A function that gets the xml object and the currency and creates an xml format output regarding the PUT part of the update
 function PutLiveValue($xml, $currency, $old, $new)
 {
 
