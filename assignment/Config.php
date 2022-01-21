@@ -1,7 +1,12 @@
 <?php
 
+//Current timezone
+@date_default_timezone_set("GMT");
 
-$xml = simplexml_load_file("XMLStore.xml");
+
+
+//XML OBJECT
+$xml = @simplexml_load_file("XMLStore.xml");
 
 
 //!------------------------------FUNCTIONS----------------------------------------
@@ -77,6 +82,8 @@ function checkAndUpdate($xml)
             $ratePath = $xml->xpath('/store/currencies/currency[@code="' . $key . '"]');
             $ratePath[0]->rate = $newValue;
         }
+        $ratePath = $xml->xpath('/store/currencies/currency[@code="USD"]');
+        $ratePath[0]->rate = 1/$GBPvalue;
         $xml->saveXML("XMLStore.xml");
 
         return;

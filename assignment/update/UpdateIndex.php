@@ -10,7 +10,7 @@ require_once("../Config.php");
 require_once("Update_Error_Handling.php");
 require_once("../XML_Generator.php");
 
-$xmlStorage = simplexml_load_file("../XMLStore.xml");
+$xmlStorage = @simplexml_load_file("../XMLStore.xml");
 
 
 //Get the values from the URL
@@ -68,7 +68,12 @@ else
 
     $newRate = getAPIValues()['data'][$cur];
     $GBPRate = getAPIValues()['data']['GBP'];
+    if($cur == 'USD')
+    {
+        $newRate = 1;
+    }
     $newRate = $newRate/$GBPRate;
+    
 
     $rqstedCur[0]->rate = $newRate;
     $xmlStorage->saveXML("../XMLStore.xml");
