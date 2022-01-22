@@ -22,6 +22,14 @@ function Update_Check_Errors($action, $cur)
 
     $liveCheck = $xmlStorage->xpath('/store/currencies/currency[@code="'. $cur . '"]/live');
 
+    $rateCheck = $xmlStorage->xpath('/store/currencies/currency[@code="'. $cur . '"]/rate');
+
+    if($rateCheck[0] == '')
+    {
+        UpdateErrorFormat(2300, "No rate listed for this currency", $action);
+        exit();
+    }
+
     if((empty($curCheck)) or ($liveCheck[0] == 0 and $action == "put"))
     {
         UpdateErrorFormat(2200, "Currency code not found for update", $action);
